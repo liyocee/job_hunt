@@ -1,6 +1,6 @@
 ## Tasks List
 [x] Initialize backend
-[ ] Initialize frontend
+[x] Initialize frontend
 [ ] Design Application(backend and frontend)
 [ ] Make Backend API :
     [ ] - Auth(Registration, Login, Logout)
