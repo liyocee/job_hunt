@@ -1,0 +1,10 @@
+[run]
+branch=True
+source=.
+omit=fabfile.py,config/*,manage.py
+
+[report]
+show_missing=True
+
+[html]
+directory = coverage

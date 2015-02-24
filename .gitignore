@@ -1,0 +1,5 @@
+backend/coverage
+frontend/node_module
+*.pyc
+/**/*.pyc
+/**/*.coverage
