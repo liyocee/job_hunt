@@ -1,5 +1,5 @@
 from rest_framework import generics
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from .serializers import EmployerSerializer, EmployerJobsSerializer
 from .models import Employer, EmployerJobs
 
@@ -11,6 +11,6 @@ class EmployerView(generics.ListCreateAPIView):
 
 
 class EmployerJobsView(generics.ListCreateAPIView):
-    permission_class = (AllowAny, )
+    permission_class = (IsAuthenticated, )
     serializer_class = EmployerJobsSerializer
     queryset = EmployerJobs.objects.all()

@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password
 from rest_framework.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from common.serializers import JobSerializer
@@ -18,6 +19,8 @@ class EmployerSerializer(serializers.ModelSerializer):
             user = get_user_model().objects.get(
                 username=validated_data['user']['username'])
         except get_user_model().DoesNotExist:
+            validated_data['user']['password'] = make_password(
+                validated_data['user']['password'])
             user = get_user_model().objects.create(**validated_data['user'])
         validated_data['user'] = user
         return super(EmployerSerializer, self).create(validated_data)
