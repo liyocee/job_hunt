@@ -18,7 +18,11 @@ LIBRARY_APPS = (
 THIRD_PARTY_APPS = (
     'rest_framework',
 )
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'common',
+    'employer',
+    'employee'
+)
 INSTALLED_APPS = LIBRARY_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
