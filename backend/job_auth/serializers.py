@@ -6,5 +6,6 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
         fields = ('first_name', 'last_name', 'is_active', 'is_superuser',
-                  'last_login', 'date_joined', 'id', 'email', 'username'
+                  'last_login', 'date_joined', 'id', 'email', 'username',
+                  "password"
                   )
