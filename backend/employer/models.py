@@ -12,6 +12,10 @@ class Employer(AbstractBase):
     location = models.ForeignKey(Location)
     phone_number = models.CharField(max_length=128, null=False, blank=False)
 
+    @property
+    def employer_location(self):
+        return self.location.name
+
 
 class EmployerJobs(AbstractBase):
     employer = models.ForeignKey(Employer)

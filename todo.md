@@ -1,12 +1,13 @@
 ## Tasks List
+
 [x] Initialize backend
 [x] Initialize frontend
 [ ] Design Application(backend and frontend)
 [ ] Make Backend API :
     [x] - Model Layer 30 min(by 4)
-    [ ] - Employer Registration(1) 20 min(by 4.20)
+    [x] - Employer Registration(1) 20 min(by 4.20)
     [ ] - Employer Login/Logout(2) 20 min(by 4.40)
-    [ ] - Employer Post Jobs, View Jobs, Retire Jobs(3) 30 min(by 5)
+    [x] - Employer Post Jobs, View Jobs, Retire Jobs(3) 30 min(by 5)
     [ ] - View Job Applicants(4) 20 min(by 5:20)
     [ ] - Send them mail(5) 10 min (by 6)
 

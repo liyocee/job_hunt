@@ -12,19 +12,31 @@ class AbstractBase(models.Model):
 class Location(AbstractBase):
     name = models.CharField(max_length=128, null=False, blank=False)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Industry(AbstractBase):
-    name = models.CharField(max_length=128, null=False, blank=False)
+    name = models.CharField(
+        max_length=128, null=False, blank=False, unique=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Skill(AbstractBase):
-    name = models.CharField(max_length=128, null=False, blank=False)
+    name = models.CharField(
+        max_length=128, null=False,
+        blank=False, unique=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Job(AbstractBase):
     name = models.CharField(max_length=128, null=False, blank=False)
     start_date = models.DateTimeField(default=timezone.now)
-    expires_on = models.DateTimeField(default=timezone.now)
+    expires_on = models.DateTimeField(null=False, blank=False)
     is_active = models.BooleanField(default=True)
     industry = models.ForeignKey(Industry, related_name='industry')
     skills = models.ManyToManyField(Skill, related_name='skills')

@@ -21,7 +21,8 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'common',
     'employer',
-    'employee'
+    'employee',
+    'job_auth'
 )
 INSTALLED_APPS = LIBRARY_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE_CLASSES = (
@@ -94,13 +95,15 @@ REST_FRAMEWORK = {
     'DEFAULT_MODEL_SERIALIZER_CLASS':
         'rest_framework.serializers.ModelSerializer',
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FileUploadParser',
     ],
     'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer'
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     ],
     'PAGINATE_BY': 25,
     'PAGINATE_BY_PARAM': 'page_size',

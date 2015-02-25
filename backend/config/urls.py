@@ -3,13 +3,13 @@ from django.contrib import admin
 
 v1_urls = patterns(
     '',
+    url(r'^employer/', include('employer.urls', namespace='employer'))
 )
 
 urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/auth/', include(
-        'rest_framework.urls',
+    url(r'^api/auth/', include('rest_framework.urls',
         namespace='rest_framework')),
     url(r'^api/v1/', include(v1_urls, namespace='v1'))
 )
