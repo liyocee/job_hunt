@@ -3,31 +3,33 @@
 [x] Initialize frontend
 [ ] Design Application(backend and frontend)
 [ ] Make Backend API :
-    [ ] - Model Layer
-    [ ] - Employer Registration(1)
-    [ ] - Employer Login/Logout(2)
-    [ ] - Employer Post Jobs, View Jobs, Retire Jobs(3)
-    [ ] - View Job Applicants(4)
-    [ ] - Send them mail(5)
+    [x] - Model Layer 30 min(by 4)
+    [ ] - Employer Registration(1) 20 min(by 4.20)
+    [ ] - Employer Login/Logout(2) 20 min(by 4.40)
+    [ ] - Employer Post Jobs, View Jobs, Retire Jobs(3) 30 min(by 5)
+    [ ] - View Job Applicants(4) 20 min(by 5:20)
+    [ ] - Send them mail(5) 10 min (by 6)
 
     ----
-    [ ] -  Employee Registration(6)
-    [ ] -  Employee Login/Logout(7)
-    [ ] -  Employee Profile(Skills)(8)
-    [ ] -  Employee view job matchings(9)
-    [ ] -  Employee Notifications(email if job match exists)(10)
-    [ ] -  Employee apply for the job(11)
+    [ ] -  Employee Registration(6) 20 min (7:20)
+    [ ] -  Employee Login/Logout(7) 20 min(7:40)
+    [ ] -  Employee Profile(Skills)(8) 20 min(8)
+    [ ] -  Employee view job matchings(9) 20 min(8:20)
+    [ ] -  Employee Notifications(email if job match exists)(10) 5 min(8:25)
+    [ ] -  Employee apply for the job(11) 10 min(8:35)
 
 [ ] Wire Up Frontend :
-    [ ] - Wire up 1
-    [ ] - Wire up 2
-    [ ] - Wire up 3
-    [ ] - Wire up 4
-    [ ] - Wire up 5
-    [ ] - Wire up 6
-    [ ] - Wire up 7
-    [ ] - Wire up 8
-    [ ] - Wire up 9
-    [ ] - Wire up 10
-    [ ] - Wire up 11
+    [ ] - Wire up 1 20 min(9)
+    [ ] - Wire up 2 20 min(9:20)
+    [ ] - Wire up 3 20 min(9:40)
+    [ ] - Wire up 4 20 min(10)
+    [ ] - Wire up 5 20 min(10:20)
+    [ ] - Wire up 6 20 min(10:40)
+    [ ] - Wire up 7 20 min(11)
+    [ ] - Wire up 8 20 min(11:20)
+    [ ] - Wire up 9 20 min(11:40)
+    [ ] - Wire up 10 20 min(12)
+    [ ] - Wire up 11 29 min(12:20)
+---- do testing
+1:20 (figure out deployement)
 
