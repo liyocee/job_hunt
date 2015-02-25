@@ -91,9 +91,9 @@ module.exports = {
         options: {
             port: 8042,
             hostname: "*",
-            keepalive: false
+            keepalive: true
         },
-        dev: {
+        server: {
             options: {
                 base: "build"
             }

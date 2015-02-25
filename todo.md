@@ -22,7 +22,7 @@
 
 - [ ] Wire Up Frontend :
     ----
-    - [ ] - Wire up 1 20 min(9)
+    - [x] - Wire up 1 20 min(9)
     - [ ] - Wire up 2 20 min(9:20)
     - [ ] - Wire up 3 20 min(9:40)
     - [ ] - Wire up 4 20 min(10)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import (Job)
+from .models import (Job, Location, Industry, Skill)
 
 
 class JobSerializer(serializers.ModelSerializer):
@@ -18,3 +18,21 @@ class JobSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Job
+
+
+class LocationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Location
+
+
+class IndustrySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Industry
+
+
+class SkillSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Skill

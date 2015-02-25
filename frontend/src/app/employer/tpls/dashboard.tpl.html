@@ -1,0 +1,80 @@
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+  <div class="">
+    <div class="col-sm-4 col-md-3 sidebar">
+    <div class="list-group">
+        <span href="#" class="list-group-item active">
+            Employer Dashboard
+            <span class="pull-right" id="slide-submenu">
+                <i class="fa fa-times"></i>
+            </span>
+        </span>
+        <a ui-sref="employer_postjob" class="list-group-item">
+            <i class="fa fa-plus-o"></i> Post Job
+        </a>
+        <a ui-sref="employer_joblist" class="list-group-item">
+            <i class="fa fa-eye"></i>Posted Jobs
+        </a>
+
+    </div>
+  </div>
+  <div class="col-sm-8 col-md-9 sidebar">
+    <form class="form-horizontal">
+            <fieldset>
+              <legend>Post Job</legend>
+              <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputEmail" ng-model="job.job.name" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Start Date</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputEmail" ng-model="job.job.start_date" placeholder="Start Date">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Expires On</label>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="inputEmail" ng-model="job.job.expires_on" placeholder="Expires On">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Industry</label>
+                <div class="col-lg-10">
+                  <select class="form-control" id="select" ng-model="job.job.industry" ng-options="item.id as item.name for item in industries">
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Location</label>
+                <div class="col-lg-10">
+                  <select class="form-control" id="select" ng-model="job.job.location" ng-options="item.id as item.name for item in locations">
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Skills</label>
+                <div class="col-lg-10">
+                  <select class="form-control" id="select" ng-model="job.job.skills" ng-options="item.id as item.name for item in skills">
+                  </select>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+          <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <a  class="btn btn-primary" ng-click="postJob()">Submit</a>
+                </div>
+              </div>
+  </div>
+</div>
