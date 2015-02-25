@@ -3,7 +3,8 @@ from django.contrib import admin
 
 v1_urls = patterns(
     '',
-    url(r'^employer/', include('employer.urls', namespace='employer'))
+    url(r'^employer/', include('employer.urls', namespace='employer')),
+    url(r'^employee/', include('employee.urls', namespace='employee'))
 )
 
 urlpatterns = patterns(
