@@ -1,11 +1,6 @@
 'use strict';
 (function(){
     angular.module('jobHunt')
-    .config(['$stateProvider','$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise( '/dashboard' );
-        }])
-
     .config(['$httpProvider', function($httpProvider){
         $httpProvider.defaults.withCredentials = true;
         $httpProvider.defaults.xsrfCookieName = 'csrftoken';
@@ -29,9 +24,9 @@
                 withCredentials: true
             }
         });
-    }]);
+    }])
 
-    /*.run(['authService', '$location',function(authService, $location){
+    .run(['authService', '$location',function(authService, $location){
         if(!authService.isLoggedIn()){
             $location.path('/login');
         }
@@ -46,5 +41,5 @@
                     $rootScope.current_user = authService.getUser();
                 }
             });
-        }]);*/
+        }]);
 })();

@@ -3,6 +3,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework import permissions
+from employee.models import Employee
+from employer.models import Employer
 from .serializers import UserSerializer
 
 
@@ -13,10 +15,23 @@ class LoginView(APIView):
         data = request.data
         username = data.get('username', None)
         password = data.get('password', None)
+        login_as = data.get('login_as', None)
         account = authenticate(username=username, password=password)
         if account is not None:
             if account.is_active:
                 login(request, account)
+                emp = None
+                if login_as == 'employee':
+                    try:
+                        emp = Employee.objects.get(user=account)
+                    except Employee.DoesNotExist:
+                        return self.no_account()
+                if login_as == 'employer':
+                    try:
+                        emp = Employer.objects.get(user=account)
+                    except Employer.DoesNotExist:
+                        return self.no_account()
+                account.id = emp.id
                 serialized_account = UserSerializer(account)
                 return Response(serialized_account.data,
                                 status=status.HTTP_200_OK)
@@ -30,6 +45,12 @@ class LoginView(APIView):
                             'status': 'Unauthorized',
                             'message': 'Username/password combination is wrong'
                             }, status=status.HTTP_401_UNAUTHORIZED)
+
+    def no_account(self):
+        return Response({
+            'status': 'Unauthorized',
+            'message': 'No user matching the account'
+            }, status=status.HTTP_401_UNAUTHORIZED)
 
 
 class LogoutView(APIView):

@@ -9,6 +9,8 @@
 
         // my apps
         "jobHunt.config",
-        "jobHunt.common"
+        "jobHunt.common",
+        "jobHunt.auth",
+        "jobHunt.employer"
     ]);
 })();

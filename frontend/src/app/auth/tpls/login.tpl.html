@@ -1,0 +1,47 @@
+<div class="login-body">
+    <article class="container-login center-block">
+        <section>
+            <div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
+                <div id="login-access" class="tab-pane fade active in">
+                    <h2 class='text-center'><i class="text-center"></i> Login</h2>
+                    <p class="alert alert-danger fade in" ng-if="error">
+                        {{ error }}
+                    </p>
+                    <form method="post" role="form" class="form-horizontal" ng-submit='login()'>
+                        <div class="form-group ">
+                            <label for="login" class="sr-only">Email</label>
+                                <input type="text" class="form-control" ng-model='user.username' name="login" id="login_value"
+                                    placeholder="Username" tabindex="1" value="" />
+                        </div>
+                        <div class="form-group ">
+                            <label for="password" class="sr-only">Password</label>
+                                <input type="password" class="form-control" name="password" ng-model='user.password' id="password"
+                                    placeholder="Password" value="" tabindex="2" />
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Login As :?</label>
+                            <div class="col-lg-10">
+                              <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" ng-model="user.login_as" value="employer" checked="">
+                                    Employer
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" ng-model="user.login_as" value="employee">
+                                    Job Seeker
+                                </label>
+                              </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group ">
+                                <button type="submit" name="log-me-in" id="submit" tabindex="5" class="btn btn-lg btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </article>
+</div>
