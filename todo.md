@@ -12,10 +12,10 @@
     [ ] - Send them mail(5) 10 min (by 6)
 
     ----
-    [ ] -  Employee Registration(6) 20 min (7:20)
+    [x] -  Employee Registration(6) 20 min (7:20)
     [ ] -  Employee Login/Logout(7) 20 min(7:40)
-    [ ] -  Employee Profile(Skills)(8) 20 min(8)
-    [ ] -  Employee view job matchings(9) 20 min(8:20)
+    [x] -  Employee Profile(Skills)(8) 20 min(8)
+    [x] -  Employee view job matchings(9) 20 min(8:20)
     [ ] -  Employee Notifications(email if job match exists)(10) 5 min(8:25)
     [ ] -  Employee apply for the job(11) 10 min(8:35)
 
