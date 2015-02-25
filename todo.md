@@ -6,14 +6,14 @@
 [ ] Make Backend API :
     [x] - Model Layer 30 min(by 4)
     [x] - Employer Registration(1) 20 min(by 4.20)
-    [ ] - Employer Login/Logout(2) 20 min(by 4.40)
+    [x] - Employer Login/Logout(2) 20 min(by 4.40)
     [x] - Employer Post Jobs, View Jobs, Retire Jobs(3) 30 min(by 5)
     [ ] - View Job Applicants(4) 20 min(by 5:20)
     [ ] - Send them mail(5) 10 min (by 6)
 
     ----
     [x] -  Employee Registration(6) 20 min (7:20)
-    [ ] -  Employee Login/Logout(7) 20 min(7:40)
+    [x] -  Employee Login/Logout(7) 20 min(7:40)
     [x] -  Employee Profile(Skills)(8) 20 min(8)
     [x] -  Employee view job matchings(9) 20 min(8:20)
     [ ] -  Employee Notifications(email if job match exists)(10) 5 min(8:25)

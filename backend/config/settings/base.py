@@ -29,6 +29,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'config.middleware.CORSMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -121,3 +122,4 @@ REST_FRAMEWORK = {
     'DATE_FORMAT': 'iso-8601',
     'TIME_FORMAT': 'iso-8601'
 }
+CLIENT_ORIGIN = 'http://localhost:8042'  # for CORS
