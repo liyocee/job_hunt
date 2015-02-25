@@ -18,3 +18,4 @@ def setup(*args, **kwargs):
     local('%s psql -c "DROP DATABASE IF EXISTS job_match"' % sudo)
     local('%s psql -c "CREATE DATABASE job_match"' % sudo)
     local('{}/manage.py migrate'.format(BASE_DIR))
+    manage('createsuperuer')
