@@ -4,7 +4,8 @@ from django.contrib import admin
 v1_urls = patterns(
     '',
     url(r'^employer/', include('employer.urls', namespace='employer')),
-    url(r'^employee/', include('employee.urls', namespace='employee'))
+    url(r'^employee/', include('employee.urls', namespace='employee')),
+    url(r'^auth/', include('job_auth.urls', namespace='auth'))
 )
 
 urlpatterns = patterns(
